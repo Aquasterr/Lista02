@@ -14,7 +14,7 @@ namespace Program
         static void Main(string[] args)
         {
             int A = 0, B = 0, branco = 0, nulo = 0;
-            for (int i = 1; i > 0; i++)
+            for (int i = 0; i > -1; i++)
             {
                 Console.WriteLine(" 1  - CANDIDATO A");
                 Console.WriteLine(" 2  - CANDIDATO B");
@@ -22,7 +22,6 @@ namespace Program
                 Console.WriteLine(" 4  - Encerrar Votação");
 
                 Console.Write("Digite a sua Escolha: ");
-                //int C;
                 bool sucesso = int.TryParse(Console.ReadLine(), out int opc);
 
                 switch(opc)
@@ -45,7 +44,7 @@ namespace Program
                         Console.WriteLine("Total de Votos lidos: " + i);
                         if (A > B) Console.WriteLine("CANDIDATO VENCEDOR: CANDIDATO A ");
                         if (B > A) Console.WriteLine("CANDIDATO VENCEDOR: CANDIDATO B ");
-                        i = -1;
+                        i = -2;
                         break;
                     default:
                         nulo++;
